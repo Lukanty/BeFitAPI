@@ -1,0 +1,21 @@
+@host = http://localhost:5189
+
+### Exercise types
+GET {{host}}/api/ExerciseTypes
+
+### Add an exercise type
+POST {{host}}/api/ExerciseTypes
+Content-Type: application/json
+
+{
+  "name": "Wykroki"
+}
+
+### The newest sessions
+GET {{host}}/api/Sessions
+
+### The exercises of a session
+GET {{host}}/api/Exercises?sessionId=1000
+
+### Statistics of the last 4 weeks
+GET {{host}}/api/Stats?weeks=4
